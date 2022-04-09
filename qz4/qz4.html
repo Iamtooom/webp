@@ -1,0 +1,26 @@
+<html> 
+<head> 
+  <title>My Document</title> 
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+  <script>
+    $(document).ready( function(){
+      $("input").click(function() {
+        $("h1").text(function() {
+          return "CSIE@CGU";
+        });
+      });
+      $("input").click(function() {
+        $("p").text(function() {
+          return "怎麼那麼棒!!.";
+        });
+      });
+    });
+  </script> 
+</head> 
+<body> 
+  <input type="button" value="Change this document."> 
+  <h1>CGU</h1> 
+  <p>好棒棒</p> 
+</body> 
+</head> 
+</html>
