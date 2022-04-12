@@ -1,36 +1,270 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>hw4</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="hw4.js"> </script>
+    <style>
+        .line {
+            border-left: thick solid rgba(0, 0, 0, 0.411);
+            height: 100%;
+            left: 1500px;
+            position: absolute;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        var i1 = 0, i2 = 0, i3 = 0, i4 = 0, i5 = 0, i6 = 0, g1 = 1, g2 = 1, g3 = 1, g4 = 1, g5 = 1, g6 = 1, k1 = 1, k2 = 1, k3 = 1, k4 = 1, k5 = 1, k6 = 1;
+        var char = [];
+        char[1] = "A.jpg";
+        char[2] = "B.jpg";
+        char[3] = "C.jpg";
+        char[4] = "D.jpg";
+        char[5] = "E.jpg";
+        char[6] = "F.jpg";
+        char[7] = "G.jpg";
+        char[8] = "H.jpg";
+        char[9] = "I.jpg";
+        char[10] = "J.jpg";
+        char[11] = "K.jpg";
+        char[12] = "L.jpg";
+        char[13] = "M.jpg";
+        char[14] = "N.jpg";
+        char[15] = "O.jpg";
+        char[16] = "P.jpg";
+        char[17] = "Q.jpg";
+        char[18] = "R.jpg";
+        char[19] = "S.jpg";
+        char[20] = "T.jpg";
+        char[21] = "U.jpg";
+        char[22] = "V.jpg";
+        char[23] = "W.jpg";
+        char[24] = "X.jpg";
+        char[25] = "Y.jpg";
+        char[26] = "Z.jpg";
+        var str1 = "";
+        var str2 = "";
+        var str3 = "";
+        var str4 = "";
+        var str5 = "";
+        var str6 = "";
+        function move1() {
+            $("#word1" + g1).animate({
+                left: '1500px'
+            }, 9000, 'linear', animationcomplete)
+            g1++;
+        }
+        function move2() {
+            $("#word2" + g2).animate({
+                left: '1500px'
+            }, 9000, 'linear', animationcomplete)
+            g2++;
+        }
+        function move3() {
+            $("#word3" + g3).animate({
+                left: '1500px'
+            }, 9000, 'linear', animationcomplete)
+            g3++;
+        }
+        function move4() {
+            $("#word4" + g4).animate({
+                left: '1500px'
+            }, 9000, 'linear', animationcomplete)
+            g4++;
+        }
+        function move5() {
+            $("#word5" + g5).animate({
+                left: '1500px'
+            }, 9000, 'linear', animationcomplete)
+            g5++;
+        }
+        function move6() {
+            $("#word6" + g6).animate({
+                left: '1500px'
+            }, 9000, 'linear', animationcomplete)
+            g6++;
+        }
+        function animationcomplete() {
+            $("*").empty();
+        }
+        function generate1() {
+            var num1 = Math.floor(Math.random() * 26 + 1);
+            i1++;
+            $("#an1").prepend("<div id='word1" + i1 + "' style='position:absolute;'><img src='images/" + char[num1] + "' width='60'></div>");
+            str1 = String.fromCharCode(num1 + 64) + str1;
+            move1();
+        }
+        function generate2() {
+            var num2 = Math.floor(Math.random() * 26 + 1);
+            i2++;
+            $("#an2").prepend("<div id='word2" + i2 + "' style='position:absolute;'><img src='images/" + char[num2] + "' width='60'></div>");
+            str2 = String.fromCharCode(num2 + 64) + str2;
+            move2();
+        }
+        function generate3() {
+            var num3 = Math.floor(Math.random() * 26 + 1);
+            i3++;
+            $("#an3").prepend("<div id='word3" + i3 + "' style='position:absolute;'><img src='images/" + char[num3] + "' width='60'></div>");
+            str3 = String.fromCharCode(num3 + 64) + str3;
+            move3();
+        }
+        function generate4() {
+            var num4 = Math.floor(Math.random() * 26 + 1);
+            i4++;
+            $("#an4").prepend("<div id='word4" + i4 + "' style='position:absolute;'><img src='images/" + char[num4] + "' width='60'></div>");
+            str4 = String.fromCharCode(num4 + 64) + str4;
+            move4();
+        }
+        function generate5() {
+            var num5 = Math.floor(Math.random() * 26 + 1);
+            i5++;
+            $("#an5").prepend("<div id='word5" + i5 + "' style='position:absolute;'><img src='images/" + char[num5] + "' width='60'></div>");
+            str5 = String.fromCharCode(num5 + 64) + str5;
+            move5();
+        }
+        function generate6() {
+            var num6 = Math.floor(Math.random() * 26 + 1);
+            i6++;
+            $("#an6").prepend("<div id='word6" + i6 + "' style='position:absolute;'><img src='images/" + char[num6] + "' width='60'></div>");
+            str6 = String.fromCharCode(num6 + 64) + str6;
+            move6();
+        }
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                setInterval(generate1, 1500);
+                setInterval(generate2, 1500);
+                setInterval(generate3, 1500);
+                setInterval(generate4, 1500);
+                setInterval(generate5, 1500);
+                setInterval(generate6, 1500);
+            });
+        });
+        $(document).ready(function () {
+            $("*").keydown(function (e1) {
+
+                if (e1.key == str1.substr(-1)) {
+                    $("#word1" + k1).stop();
+                    $("#word1" + k1).remove();
+                    k1++;
+                    str1 = str1.substr(0, str1.length - 1);
+                }
+
+
+            });
+            $("*").keydown(function (e2) {
+
+                if (e2.key == str2.substr(-1)) {
+                    $("#word2" + k2).stop();
+                    $("#word2" + k2).remove();
+                    k2++;
+                    str2 = str2.substr(0, str2.length - 1);
+                }
+
+
+            });
+            $("*").keydown(function (e3) {
+
+                if (e3.key == str3.substr(-1)) {
+                    $("#word3" + k3).stop();
+                    $("#word3" + k3).remove();
+                    k3++;
+                    str3 = str3.substr(0, str3.length - 1);
+                }
+
+
+            });
+            $("*").keydown(function (e4) {
+
+                if (e4.key == str4.substr(-1)) {
+                    $("#word4" + k4).stop();
+                    $("#word4" + k4).remove();
+                    k4++;
+                    str4 = str4.substr(0, str4.length - 1);
+                }
+
+
+            });
+            $("*").keydown(function (e5) {
+
+                if (e5.key == str5.substr(-1)) {
+                    $("#word5" + k5).stop();
+                    $("#word5" + k5).remove();
+                    k5++;
+                    str5 = str5.substr(0, str5.length - 1);
+                }
+
+
+            });
+            $("*").keydown(function (e6) {
+
+                if (e6.key == str6.substr(-1)) {
+                    $("#word6" + k6).stop();
+                    $("#word6" + k6).remove();
+                    k6++;
+                    str6 = str6.substr(0, str6.length - 1);
+                }
+
+
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div style="background:#ed2d2d;height:20px;width:1000px;position:absolute;"><div id = "text"></div></div>
+    <button id="btn1">START</button>
+    <div class="line"></div>
     </br>
     </br>
-
-    <div1 style="background:#ed2d2d;height:20px;width:1000px;position:absolute;"><div id = "text1"></div></div1>
     </br>
     </br>
-
-    <div2 style="background:#ed2d2d;height:20px;width:1000px;position:absolute;"><div id = "text2"></div></div2>
+    <div id="an1" style="position:absolute;"></div>
     </br>
     </br>
-
-    <div3 style="background:#ed2d2d;height:20px;width:1000px;position:absolute;"><div id = "text3"></div></div3>
     </br>
     </br>
-
-    <div4 style="background:#ed2d2d;height:20px;width:1000px;position:absolute;"><div id = "text4"></div></div4>
+    <hr>
     </br>
     </br>
-
-    <div5 style="background:#ed2d2d;height:20px;width:1000px;position:absolute;"><div id = "text5"></div></div5>
+    <div id="an2" style="position:absolute;"></div>
     </br>
     </br>
-
+    </br>
+    </br>
+    <hr>
+    </br>
+    </br>
+    <div id="an3" style="position:absolute;"></div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <hr>
+    </br>
+    </br>
+    <div id="an4" style="position:absolute;"></div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <hr>
+    </br>
+    </br>
+    <div id="an5" style="position:absolute;"></div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <hr>
+    </br>
+    </br>
+    <div id="an6" style="position:absolute;"></div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <hr>
+    </br>
+    </br>
 </body>
+</head>
 
 </html>
