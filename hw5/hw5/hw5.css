@@ -1,0 +1,30 @@
+
+.h{
+    background-color: #020620	; 
+    color: rgb(251, 255, 240); 
+    padding: 15px; 
+    font-weight: bolder; 
+    font-size: 40px; 
+    text-align: center;
+
+}
+.sn{
+    font-weight: bolder; 
+    font-size: 30px; 
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    margin-left: 550px;
+    margin-top: 10px;
+}
+#s{
+    text-align: left;
+    margin-left: 620px; 
+    padding-top: 15px;
+    font-weight: bolder; 
+    font-size: 30px; 
+    padding-top: 10px;
+}
+.bg{
+    background-color: #f3f8f8;
+}
