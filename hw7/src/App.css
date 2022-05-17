@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App {
+  text-align: center;
+  border-style: ridge;
+  border-color: black;
+  border-width: 5px;
+  width: 350px;
+  height: 250px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.username {
+  border-style: ridge;
+  border-color: black;
+  border-width: 3px;
+}
+
+.password {
+  border-style: ridge;
+  border-color: black;
+  border-width: 3px;
+}
+
+.Button_Image {
+  border-width: 3px;
+  border-radius: 10px;
+  width: 42px;
+  height: 21px;
+  position: static;
+}
+
+.button_border {
+  width: 62px;
+  height: 42px;
+  position: relative;
+}
+
+.button {
+  margin-top: 15px;
+  position: relative;
+  left: 95px;
+}
+
+.Login_Image {
+  width: 164px;
+  height: 46px;
+  position: relative;
+}
+
+.Password_Image {
+  width: 90px;
+  height: 25px;
+  position: relative;
+}
+
+.UserName_Image {
+  width: 90px;
+  height: 25px;
+  position: relative;
+}
